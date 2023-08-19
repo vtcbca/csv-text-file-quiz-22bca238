@@ -1,0 +1,20 @@
+import csv
+intro=[['1. My name is sujya'],
+      ['2.I am BCA student.'],
+      ['3.My hobby is reading.'],
+      ['4.I come from vyara.'],
+      ['5.I love play.']]
+print(intro)
+[['1. My name is sujya'], ['2.I am BCA student.'], ['3.My hobby is reading.'], ['4.I come from vyara.'], ['5.I love play.']]
+with open('intro.text','w',newline='') as a:
+          w=csv.writer(a)
+          w.writerows(intro)     
+with open('intro.text','r') as a:
+    a=csv.reader(a)
+    for i in a:
+        print(i)
+['1. My name is sujya']
+['2.I am BCA student.']
+['3.My hobby is reading.']
+['4.I come from vyara.']
+['5.I love play.']
